@@ -4,13 +4,6 @@ server :
   port : 8080
 
 
-oauth:
-  google:
-    redirect_uri: http://localhost:8080/oauth/callback
-    client_id: 61528740066-savt6auv1dqdqkcp6pdk7trt331g82rq.apps.googleusercontent.com
-    secret: hkPHfzaZes8H1erMhOtZYtRr
-    response_type: code
-    scope: email
 spring :
   datasource :
     url : jdbc:mysql://localhost:3306/oauth
@@ -21,3 +14,5 @@ spring :
   jpa :
     hibernate :
       ddl-auto : create-drop
+  profiles :
+    include : google
